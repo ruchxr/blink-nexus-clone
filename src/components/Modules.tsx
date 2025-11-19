@@ -37,20 +37,15 @@ const modules = [
 const repAssistantOptions = [
   {
     icon: Database,
-    name: "knowsphere",
-    link: "https://example.com/knowsphere", // Replace with your link
+    name: "Knowsphere",
+    link: "https://knowsphere.auxo.tech/chat", // Replace with your link
   },
   {
     icon: Brain,
-    name: "agi",
-    link: "https://example.com/agi", // Replace with your link
-  },
-  {
-    icon: Users,
-    name: "crm",
-    isVideo: true,
-    videoUrl: "https://www.youtube.com/embed/DTVRgrmTGyU",
-  },
+    name: "Auxo",
+    isVideo: false,
+    link: "https://gi.auxo.tech/", 
+  }
 ];
 
 const Modules = () => {
@@ -79,7 +74,7 @@ const Modules = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Three Powerful Modules
+            Rep Nexus
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Choose the tools that fit your workflow, or use them all together for maximum impact.
@@ -104,10 +99,6 @@ const Modules = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">{module.description}</p>
-                <Button variant="ghost" className="gap-2 group-hover:gap-3 transition-all p-0 h-auto">
-                  Learn more
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -120,7 +111,7 @@ const Modules = () => {
           <DialogHeader>
             <DialogTitle className="text-center text-2xl">Choose an option</DialogTitle>
           </DialogHeader>
-          <div className="grid grid-cols-3 gap-8 py-8 px-4">
+          <div className="grid grid-cols-2 gap-8 py-8 px-4">
             {repAssistantOptions.map((option) => (
               <button
                 key={option.name}
@@ -146,7 +137,6 @@ const Modules = () => {
           <div className="aspect-video w-full">
             <iframe
               className="w-full h-full rounded-lg"
-              src={repAssistantOptions.find(o => o.isVideo)?.videoUrl}
               title="CRM Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
