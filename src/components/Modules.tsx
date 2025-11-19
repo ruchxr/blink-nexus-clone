@@ -45,6 +45,12 @@ const repAssistantOptions = [
     name: "Auxo",
     isVideo: false,
     link: "https://gi.auxo.tech/", 
+  },
+  {
+    icon: Users,
+    name: "crm",
+    isVideo: true,
+    videoUrl: "https://www.youtube.com/embed/DTVRgrmTGyU",
   }
 ];
 
@@ -111,7 +117,7 @@ const Modules = () => {
           <DialogHeader>
             <DialogTitle className="text-center text-2xl">Choose an option</DialogTitle>
           </DialogHeader>
-          <div className="grid grid-cols-2 gap-8 py-8 px-4">
+          <div className="grid grid-cols-3 gap-8 py-8 px-4">
             {repAssistantOptions.map((option) => (
               <button
                 key={option.name}
@@ -137,6 +143,7 @@ const Modules = () => {
           <div className="aspect-video w-full">
             <iframe
               className="w-full h-full rounded-lg"
+              src={repAssistantOptions.find(o => o.isVideo)?.videoUrl}
               title="CRM Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
