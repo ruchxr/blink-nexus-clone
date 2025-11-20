@@ -39,11 +39,11 @@ const repAssistantOptions = [
     icon: Database,
     name: "Knowsphere",
     description: "AI-powered platform that instantly retrieves, analyzes, and summarizes complex documents and thus improving accuracy, compliance, and decision-making across fu",
-    link: "https://knowsphere.auxo.tech/chat", // Replace with your link
+    link: "https://knowsphere.auxo.tech/chat",
   },
   {
     icon: Brain,
-    name: "AGI",
+    name: "Auxo",
     isVideo: false,
     description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
     link: "https://gi.auxo.tech/", 
@@ -132,7 +132,7 @@ const Modules = () => {
                   <option.icon className="w-10 h-10 text-primary" />
                 </div>
                 <span className="text-base font-medium text-foreground capitalize">{option.name}</span>
-                <span className="text-base font-small text-foreground">{option.description}</span>
+                <p className="text-base font-small text-foreground text-left">{option.description}</p>
               </button>
             ))}
           </div>
