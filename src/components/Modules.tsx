@@ -43,7 +43,7 @@ const repAssistantOptions = [
   },
   {
     icon: Brain,
-    name: "Auxo",
+    name: "AGI",
     isVideo: false,
     description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
     link: "https://gi.auxo.tech/", 
