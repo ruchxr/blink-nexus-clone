@@ -79,7 +79,7 @@ const Modules = () => {
     <section id="modules" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 mt-5">
             Rep Nexus
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -91,7 +91,7 @@ const Modules = () => {
           {modules.map((module) => (
             <Card 
               key={module.title} 
-              className="group hover:shadow-lg transition-shadow border-border cursor-pointer"
+              className="group hover:shadow-lg transition-shadow border-border cursor-pointer p-6"
               onClick={() => handleModuleClick(module)}
             >
               <CardHeader>
