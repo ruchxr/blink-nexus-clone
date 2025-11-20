@@ -12,7 +12,7 @@ const modules = [
     description:
       "Turn scattered data into clear, prioritized insights with audio‑first summaries. Perfect for last‑minute refresh during commute or waiting time.",
     iconColor: "text-primary",
-    link: "https://example.com/insighto", // Replace with your link
+    link: "https://auxo-frontend-stg.auxo.tech/login", // Replace with your link
   },
   {
     icon: MessageSquare,
@@ -50,7 +50,7 @@ const repAssistantOptions = [
     icon: Users,
     name: "crm",
     isVideo: true,
-    videoUrl: "https://www.youtube.com/embed/DTVRgrmTGyU",
+    videoUrl: "\static\Demo_Voice2SalesforceN.mp4",
   }
 ];
 
@@ -141,12 +141,13 @@ const Modules = () => {
             <DialogTitle>CRM Video</DialogTitle>
           </DialogHeader>
           <div className="aspect-video w-full">
-            <iframe
+            <video
               className="w-full h-full rounded-lg"
-              src={repAssistantOptions.find(o => o.isVideo)?.videoUrl}
-              title="CRM Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              src="/static/Demo_Voice2SalesforceN.mp4"
+              controls
+              autoPlay
+              muted
+              playsInline
             />
           </div>
         </DialogContent>
