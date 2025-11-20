@@ -42,8 +42,8 @@ const repAssistantOptions = [
     link: "https://knowsphere.auxo.tech/chat",
   },
   {
-    icon: "/static/auxo.png",
-    name: "Auxo",
+    icon: "/static/brain_3.png",
+    name: "AGI",
     isVideo: false,
     description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
     link: "https://gi.auxo.tech/", 
