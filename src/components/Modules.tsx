@@ -36,20 +36,20 @@ const modules = [
 
 const repAssistantOptions = [
   {
-    icon: Database,
+    icon: "\/static/knowsphere.jpg",
     name: "Knowsphere",
     description: "AI-powered platform that instantly retrieves, analyzes, and summarizes complex documents and thus improving accuracy, compliance, and decision-making across fu",
     link: "https://knowsphere.auxo.tech/chat",
   },
   {
-    icon: Brain,
+    icon: "/static/auxo.png",
     name: "Auxo",
     isVideo: false,
     description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
     link: "https://gi.auxo.tech/", 
   },
   {
-    icon: Users,
+    icon: "/static/user.png",
     name: "CRM",
     isVideo: true,
     description: "AI solution that captures voice notes and automates routine administrative tasks saving time and streamlining everyday workflows.",
@@ -129,10 +129,10 @@ const Modules = () => {
                 className="flex flex-col items-center gap-4 p-6 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
               >
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <option.icon className="w-10 h-10 text-primary" />
+                  <img src={option.icon} className="w-10 h-10 object-contain" />
                 </div>
                 <span className="text-base font-medium text-foreground capitalize">{option.name}</span>
-                <p className="text-base font-small text-foreground text-left">{option.description}</p>
+                <p className="text-base text-sm text-foreground text-left mt-3">{option.description}</p>
               </button>
             ))}
           </div>
