@@ -42,13 +42,13 @@ const repAssistantOptions = [
   },
   {
     icon: Brain,
-    name: "Auxo",
+    name: "AGI",
     isVideo: false,
     link: "https://gi.auxo.tech/", 
   },
   {
     icon: Users,
-    name: "crm",
+    name: "CRM",
     isVideo: true,
     videoUrl: "\static\Demo_Voice2SalesforceN.mp4",
   }
