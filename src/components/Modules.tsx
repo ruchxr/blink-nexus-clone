@@ -21,7 +21,7 @@ const modules = [
     description:
       "Simulate HCP conversations with AI‑driven roleplay and get instant feedback on tone, content, and objection handling. Build confidence before every call.",
     iconColor: "text-primary",
-    link: "https://example.com/supercoach", // Replace with your link
+    link: "https://medpersona.auxo.tech/login?from=%2F", // Replace with your link
   },
   {
     icon: Calendar,
