@@ -42,7 +42,7 @@ const repAssistantOptions = [
     link: "https://knowsphere.auxo.tech/chat",
   },
   {
-    icon: "/static/brain_3.png",
+    icon: "/static/agi.png",
     name: "AGI",
     isVideo: false,
     description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
@@ -128,7 +128,7 @@ const Modules = () => {
                 onClick={() => handleOptionClick(option)}
                 className="flex flex-col items-center gap-4 p-6 rounded-lg border border-border hover:border-primary hover:bg-primary/5 transition-all group"
               >
-                <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <img src={option.icon} className="w-10 h-10 object-contain" />
                 </div>
                 <span className="text-base font-medium text-foreground capitalize">{option.name}</span>
