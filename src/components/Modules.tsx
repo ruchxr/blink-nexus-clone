@@ -28,7 +28,7 @@ const modules = [
     title: "Rep Assistant",
     tagline: "Admin work? Done.",
     description:
-      "Capture voice notes, auto‑update CRM, draft follow‑up emails, and plan tomorrow's schedule—all with compliance built in.",
+      "A unified AI solution that accelerates document search, distills key insights, captures voice inputs, and eliminates routine administrative effort—delivering fast, clear information that saves time and sharpens preparation.",
     iconColor: "text-primary",
     isSpecial: true,
   },
@@ -38,18 +38,21 @@ const repAssistantOptions = [
   {
     icon: Database,
     name: "Knowsphere",
+    description: "AI-powered platform that instantly retrieves, analyzes, and summarizes complex documents and thus improving accuracy, compliance, and decision-making across fu",
     link: "https://knowsphere.auxo.tech/chat", // Replace with your link
   },
   {
     icon: Brain,
     name: "Auxo",
     isVideo: false,
+    description: "A conversational AI solution that removes the complexity of traditional BI, delivering fast, self-serve insights.",
     link: "https://gi.auxo.tech/", 
   },
   {
     icon: Users,
-    name: "crm",
+    name: "CRM",
     isVideo: true,
+    description: "AI solution that captures voice notes and automates routine administrative tasks saving time and streamlining everyday workflows.",
     videoUrl: "\static\Demo_Voice2SalesforceN.mp4",
   }
 ];
@@ -77,7 +80,7 @@ const Modules = () => {
 
   return (
     <section id="modules" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-screen-xl px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 mt-5">
             Rep Nexus
@@ -87,18 +90,19 @@ const Modules = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-14 justify-items-center">
           {modules.map((module) => (
             <Card 
               key={module.title} 
-              className="group hover:shadow-lg transition-shadow border-border cursor-pointer p-6"
+              className="group hover:shadow-xl transition-all border-border cursor-pointer p-8 md:p-10
+              min-h-[320px] md:min-h-[360px] lg:min-h-[400px] rounded-2xl"
               onClick={() => handleModuleClick(module)}
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <module.icon className={`w-6 h-6 ${module.iconColor}`} />
                 </div>
-                <CardTitle className="text-2xl mb-2">{module.title}</CardTitle>
+                <CardTitle className="text-2xl md:text-3xl mb-2">{module.title}</CardTitle>
                 <CardDescription className="text-primary font-medium">
                   {module.tagline}
                 </CardDescription>
@@ -113,11 +117,11 @@ const Modules = () => {
 
       {/* Rep Assistant Dialog */}
       <Dialog open={showRepAssistant} onOpenChange={setShowRepAssistant}>
-        <DialogContent className="sm:max-w-2xl">
+        <DialogContent className="sm:max-w-3xl md:max-w-4xl lg:max-w-5xl p-10">
           <DialogHeader>
             <DialogTitle className="text-center text-2xl">Choose an option</DialogTitle>
           </DialogHeader>
-          <div className="grid grid-cols-3 gap-8 py-8 px-4">
+          <div className="grid grid-cols-3 gap-20 py-8 px-4">
             {repAssistantOptions.map((option) => (
               <button
                 key={option.name}
@@ -128,6 +132,7 @@ const Modules = () => {
                   <option.icon className="w-10 h-10 text-primary" />
                 </div>
                 <span className="text-base font-medium text-foreground capitalize">{option.name}</span>
+                <span className="text-base font-small text-foreground">{option.description}</span>
               </button>
             ))}
           </div>
